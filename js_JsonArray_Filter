@@ -1,0 +1,18 @@
+<script>
+var fruits = [{'id':1, 'type': 'external'}, {'id':2}, {'id':3, type: 'internal'}];
+var result = [];
+var result2 = []
+//iterative approach
+ for (var key of fruits) {
+    if (key.type == 'external') {
+       result.push(key);
+       console.log(result);
+    }
+ }
+
+// array method filter approach
+result = fruits.filter((element) => { return element.type == 'external';});
+console.log(result);
+console.log(result2);// filtered values which are external stored in result array
+
+</script>
